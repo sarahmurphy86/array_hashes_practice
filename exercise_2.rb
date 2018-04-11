@@ -84,6 +84,21 @@ end
 
 
 # Erik is one lottery number short! Add the number 7 to be included in his lottery numbers
+
+result = users ["Erik"] [:lottery_numbers].push(7)
+p result
+
 # Change Erik's hometown to Edinburgh
-# Add a pet dog to Erik called "Fluffy"
-# Add another person to the users hash
+
+result = users ["Erik"] [:home_town]=("Edinburgh")
+p result
+
+# # Add a pet dog to Erik called "Fluffy"
+
+users ["Erik"] [:pets].push({name:"fluffy", species:"dog"})
+p users["Erik"]
+
+
+# # Add another person to the users hash
+users["me"]=({home_town:"Dunbar"})
+p users["me"]
